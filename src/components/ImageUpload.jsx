@@ -6,17 +6,22 @@ const ImageUpload = props => {
   const inputRef = createRef();
   const [ iconName, setIconName ] = useState('images outline');
   const [ messageColor, setMessageColor ] = useState('grey');
-  const [ message, setMessage ] = useState('Welcome');
+  const [ message, setMessage ] = useState('.PNG or .JPG Image');
 
   const handleChange = event => {
     const file = event.target.files[0];
+    if (!file) {
+      setIconName('images outline');
+      setMessageColor('grey');
+      setMessage('.PNG or .JPG Image');
+      return;
+    }
     props.handleImageChange(file);
     setIconName('check');
     setMessageColor('success');
-    setMessage('Image Uploaded')
+    setMessage('Image Uploaded');
   }
 
-    
   return(
     <Segment placeholder className='image-upload-container' >
       <div className='input-image'>
@@ -36,7 +41,7 @@ const ImageUpload = props => {
       <input
         ref={inputRef}
         type="file"
-        accept='image/jpg, image/png'
+        accept='image/*'
         hidden
         onChange={handleChange}
       />
