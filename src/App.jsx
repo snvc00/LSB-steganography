@@ -4,6 +4,7 @@ import { Header, Icon, Segment, Grid, Divider } from 'semantic-ui-react';
 import ImageUpload from './components/ImageUpload';
 import EncodeMessage from './components/EncodeMessage';
 import DecodeMessage from './components/DecodeMessage';
+import DisclaimerNotification from './components/DisclaimerNotification';
 import './App.css';
 
 export default class App extends React.Component {
@@ -40,6 +41,13 @@ export default class App extends React.Component {
 
   downloadEncodedImage = () => {
     if (!this.state.image) {
+      this.setMissingImageException('encodeStatus');
+      return;
+    }
+
+    const imageType = this.state.image.type ? this.state.image.type : null;
+
+    if (imageType !== 'image/jpeg' && imageType !== 'image/png') {
       this.setMissingImageException('encodeStatus');
       return;
     }
@@ -123,7 +131,7 @@ export default class App extends React.Component {
     updatedState[exceptionTarget] = {
       color: 'error',
       header: 'Error',
-      message: 'Please, load an image first',
+      message: 'Please, load a valid image first',
       icon: 'x',
       isLoading: false
     }
@@ -188,6 +196,7 @@ export default class App extends React.Component {
               />
             </Grid.Column>
           </Grid>
+          <DisclaimerNotification />
         </Segment>
       </div>
     );
