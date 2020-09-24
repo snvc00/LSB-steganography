@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a9e6a2d461f91fe3c0ff9c5c37dd979f",
+    "revision": "413a278789a25105ee24971a58468d28",
     "url": "/lsb-steganography/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lsb-steganography/static/css/2.a5818e86.chunk.css"
   },
   {
-    "revision": "315c1c0cfe103b156b8f",
+    "revision": "2dd29842f8e3e07bdd8c",
     "url": "/lsb-steganography/static/css/main.960b7049.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lsb-steganography/static/js/2.805c7689.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "315c1c0cfe103b156b8f",
-    "url": "/lsb-steganography/static/js/main.a13ae54e.chunk.js"
+    "revision": "2dd29842f8e3e07bdd8c",
+    "url": "/lsb-steganography/static/js/main.f229e59a.chunk.js"
   },
   {
     "revision": "93f0cf6d86b4d415d845",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lsb-steganography/precache-manifest.6b2c1ca643830d15bfe32e5891f2af20.js"
+  "/lsb-steganography/precache-manifest.705939ad44e7c1e314289e68da102a5f.js"
 );
 
 self.addEventListener('message', (event) => {
