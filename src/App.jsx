@@ -71,7 +71,7 @@ export default class App extends React.Component {
     formData.append('message', this.state.message);
     formData.append('image', this.state.image);
 
-    axios.post('/encode', formData).then(response => {
+    axios.post(`${process.env.REACT_APP_NODE_SERVER}/encode`, formData).then(response => {
       var link = document.createElement('a');
       link.download = 'encoded.png';
       link.href = `${process.env.REACT_APP_NODE_SERVER}/encoded-image`;
@@ -112,7 +112,7 @@ export default class App extends React.Component {
     const formData = new FormData();
     formData.append('image', this.state.image);
 
-    axios.post('/decode', formData).then(response => {
+    axios.post(`${process.env.REACT_APP_NODE_SERVER}/decode`, formData).then(response => {
       this.setState({
         decodeStatus: {
           color: 'success',
