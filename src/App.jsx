@@ -45,7 +45,7 @@ export default class App extends React.Component {
       return;
     }
 
-    const imageType = this.state.image.type ? this.state.image.type : null;
+    const imageType =  this.state.image.type || null;
 
     if (imageType !== 'image/jpeg' && imageType !== 'image/png') {
       this.setMissingImageException('encodeStatus');
@@ -71,10 +71,10 @@ export default class App extends React.Component {
     formData.append('message', this.state.message);
     formData.append('image', this.state.image);
 
-    axios.post('http://localhost:4000/encode', formData).then(response => {
+    axios.post('/encode', formData).then(response => {
       var link = document.createElement('a');
       link.download = 'encoded.png';
-      link.href = 'http://localhost:4000/encoded-image';
+      link.href = `${process.env.REACT_APP_NODE_SERVER}/encoded-image`;
       link.target = '_blank';
       link.click();
       
@@ -87,6 +87,7 @@ export default class App extends React.Component {
           isLoading: false
         }
       });
+      window.location.reload();
     }).catch(error => {
       this.handleRequestError('encodeStatus', error);
     });
@@ -111,7 +112,7 @@ export default class App extends React.Component {
     const formData = new FormData();
     formData.append('image', this.state.image);
 
-    axios.post('http://localhost:4000/decode', formData).then(response => {
+    axios.post('/decode', formData).then(response => {
       this.setState({
         decodeStatus: {
           color: 'success',
