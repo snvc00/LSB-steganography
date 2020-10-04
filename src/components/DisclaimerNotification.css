@@ -1,0 +1,14 @@
+.disclaimer {
+    margin-top: 5rem !important;
+    max-width: 45vw;
+}
+
+.other-info {
+    margin-top: 1rem !important;
+    margin-bottom: 4rem !important; 
+    max-width: 45vw;
+}
+
+.disclaimer-and-info-container {
+    align-self: center !important;
+}

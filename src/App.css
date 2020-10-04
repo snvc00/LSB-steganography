@@ -1,0 +1,15 @@
+body {
+  background: url('./assets/topography.svg') !important;
+}
+
+.app {
+  margin: 4rem 4rem;
+}
+
+.subtitle-header {
+  margin: 2rem !important;
+}
+
+.container-segment {
+  padding: 0rem 3rem !important;
+}

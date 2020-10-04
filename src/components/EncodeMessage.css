@@ -1,0 +1,13 @@
+.input-form {
+    margin-top: 20px !important;
+    max-width: none !important;
+}
+
+.input-form div {
+    max-width: none !important;
+}
+
+.download-button {
+    margin-top: 3rem !important;
+    margin-bottom: 2rem !important  ;
+}

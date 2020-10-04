@@ -1,0 +1,13 @@
+.input-image {
+    text-align: center;
+    margin: 2rem 5vw;
+    max-width: 20rem !important;
+    position: relative;
+}
+
+.image-upload-container {
+    margin-top: 5vh !important;
+    min-height: 50vh !important;
+    align-items: center !important;
+    
+}
